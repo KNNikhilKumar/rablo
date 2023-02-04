@@ -4,7 +4,7 @@ const app=express();
 const cors=require('cors');
 app.use(cors());
 app.use(express.json());
-app.listen(8000,()=> console.log("server started"));
+app.listen(process.env.PORT,()=> console.log("server started"));
 const mongoose=require('mongoose');
 mongoose.connect(process.env.DB);
 mongoose.set('strictQuery',true);
