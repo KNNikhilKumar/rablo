@@ -1,0 +1,38 @@
+GET http://localhost:8000/product/
+
+###
+POST http://localhost:8000/product/
+Content-Type: application/json
+
+{
+    "id":"3",
+    "name":"product3",
+    "price":20,
+    "createdAt":"2002-12-09",
+    "rating":1,
+    "featured":true,
+    "company":"paypal"
+}
+
+###
+PATCH http://localhost:8000/product/1
+Content-Type: application/json
+
+{
+    "price": 30,
+    "featured": false,
+    "rating": 4,
+    "company":"paypal-laid"
+}
+
+###
+DELETE http://localhost:8000/product/3
+
+###
+GET http://localhost:8000/product/featured
+
+###
+GET http://localhost:8000/product/price/15
+
+###
+GET http://localhost:8000/product/rating/3.0
